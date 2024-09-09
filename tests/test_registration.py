@@ -7,6 +7,16 @@ from urls import URL
 
 class TestRegistrationPage:
     def test_registration_success(self, driver):
+            test_user = TestUser()  # Создаем случайного пользователя
+            driver.get(URL.signup)  # Переход на страницу регистрации
+            driver.find_element(*Locator.input_name).send_keys(test_user.username)  # Заполнение формы регистрации
+            driver.find_element(*Locator.input_email).send_keys(test_user.email)
+            driver.find_element(*Locator.input_password).send_keys(test_user.password)
+            driver.find_element(*Locator.button_submit).click()
+            # Ожидание перенаправления на страницу входа
+            WebDriverWait(driver, 25).until(EC.url_to_be(URL.login))
+
+    def test_registration_success_static(self, driver):
         driver.get(URL.signup) # Переход на страницу регистрации
         driver.find_element(*Locator.input_name).send_keys(CorrectUsersData.username) # Заполнение формы регистрации
         driver.find_element(*Locator.input_email).send_keys(CorrectUsersData.email)
