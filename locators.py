@@ -38,4 +38,4 @@ class Locator:
     souses_list = By.XPATH, './/h2[text()="Соусы"]'  # Список "Соусы"
     nachinki_block = By.XPATH, '//span[text() = "Начинки"]' # Заголовок раздела "Начинки" в меню конструктора
     nachinki_list = By.XPATH, './/h2[text()="Начинки"]'  # Список "Начинки"
-    logo = By.XPATH, '//div[@class="AppHeader_header__logo__2D0X2"]' # Кликабельный логотип в шапке сайта
+    logo = By.XPATH, '//div[contains(@class, "AppHeader_header__logo")]' # Кликабельный логотип в шапке сайта

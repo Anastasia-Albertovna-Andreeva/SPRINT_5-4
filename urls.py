@@ -1,6 +1,7 @@
-class URL:
-    home = 'https://stellarburgers.nomoreparties.site/'  # Домашняя страница
-    login = 'https://stellarburgers.nomoreparties.site/login'  # Страница входа
-    signup = 'https://stellarburgers.nomoreparties.site/register'  # Страница регистрации
-    password_reset = 'https://stellarburgers.nomoreparties.site/forgot-password'  # Восстановление пароля
-    user_profile = 'https://stellarburgers.nomoreparties.site/account/profile'  # Профиль пользователя
+    class URL:
+        base = 'https://stellarburgers.nomoreparties.site'  # Базовый URL
+        home = f'{base}/'  # Домашняя страница
+        login = f'{base}/login'  # Страница входа
+        signup = f'{base}/register'  # Страница регистрации
+        password_reset = f'{base}/forgot-password'  # Восстановление пароля
+        user_profile = f'{base}/account/profile'  # Профиль пользователя
